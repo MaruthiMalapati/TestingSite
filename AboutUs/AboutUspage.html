@@ -62,7 +62,7 @@
 </head>
 
 <body class="bg-white text-gray-800 dark:bg-gray-900 dark:text-white transition duration-300">
-
+  <div id="aboutusnavbar"></div>
   <!-- Header -->
   <header class="sticky-top shadow bg-white dark:bg-gray-800 py-3 z-50">
     <div class="container d-flex justify-content-between align-items-center">
@@ -181,6 +181,13 @@
 
   <!-- Scroll Fade-In Animation -->
   <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+    fetch('Navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('aboutusnavbar').innerHTML = data);
+  });
+
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
