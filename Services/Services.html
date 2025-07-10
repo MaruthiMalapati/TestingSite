@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Discover our modern digital services, including web design, app development, marketing, and more. Built with responsiveness and animations.">
+  <title>Services – Motion Enhanced</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- AOS (Animate on Scroll) -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/>
+
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a2d04b1577.js" crossorigin="anonymous"></script>
+
+  <style>
+    html {
+      font-family: 'Inter', sans-serif;
+    }
+    .bg-blur {
+      backdrop-filter: blur(10px);
+    }
+  </style>
+</head>
+
+<body class="bg-gradient-to-b from-indigo-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-gray-100 transition duration-500">
+
+  <!-- Header -->
+  <header class="sticky-top bg-white/70 dark:bg-gray-900/80 backdrop-blur-lg border-b shadow-sm py-3 z-50">
+    <div class="container d-flex justify-content-between align-items-center">
+      <h1 class="text-2xl fw-bold text-indigo-700 dark:text-indigo-400">Our Services</h1>
+      <!-- <button onclick="document.documentElement.classList.toggle('dark')" class="btn btn-sm btn-outline-secondary">Toggle Mode</button> -->
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative overflow-hidden text-center py-20">
+    <div class="container position-relative z-10">
+      <h2 class="text-4xl fw-bold mb-3" data-aos="fade-up">Explore Our Digital Solutions</h2>
+      <p class="lead text-muted dark:text-gray-300" data-aos="fade-up" data-aos-delay="100">From web to mobile, branding to cloud — we build with purpose and precision.</p>
+    </div>
+    <!-- Floating Background Shapes -->
+    <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+      <svg class="absolute top-10 left-1/2 -translate-x-1/2 w-[300px] opacity-20 animate-pulse" fill="none" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="#4F46E5"/></svg>
+      <svg class="absolute bottom-0 right-10 w-[200px] opacity-30 animate-spin-slow" fill="#818cf8" viewBox="0 0 100 100"><rect width="100" height="100" rx="20"/></svg>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-10">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Service Card -->
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:scale-[1.03] transition transform duration-300">
+            <i class="fas fa-code fa-2x text-indigo-600 mb-3"></i>
+            <h5 class="fw-semibold">Web Development</h5>
+            <p class="text-muted dark:text-gray-300">Custom websites using HTML, React, and frameworks. Fast, secure, and scalable builds.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:rotate-1 hover:scale-105 transition duration-300">
+            <i class="fas fa-mobile-alt fa-2x text-indigo-600 mb-3"></i>
+            <h5 class="fw-semibold">Mobile App Development</h5>
+            <p class="text-muted dark:text-gray-300">Cross-platform apps using Flutter and React Native for iOS and Android.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:scale-105 transition duration-300">
+            <i class="fas fa-paint-brush fa-2x text-indigo-600 mb-3"></i>
+            <h5 class="fw-semibold">UI/UX Design</h5>
+            <p class="text-muted dark:text-gray-300">User-first experiences with intuitive interfaces and engaging visuals.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+          <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:-rotate-1 transition duration-300">
+            <i class="fas fa-bullhorn fa-2x text-indigo-600 mb-3"></i>
+            <h5 class="fw-semibold">Digital Marketing</h5>
+            <p class="text-muted dark:text-gray-300">SEO, social media, and content marketing to grow your digital presence.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+          <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:scale-105 hover:shadow-xl transition duration-300">
+            <i class="fas fa-cloud fa-2x text-indigo-600 mb-3"></i>
+            <h5 class="fw-semibold">Cloud & DevOps</h5>
+            <p class="text-muted dark:text-gray-300">CI/CD pipelines, cloud scaling, AWS & Azure expertise.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+          <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:rotate-2 transition duration-300">
+            <i class="fas fa-shield-alt fa-2x text-indigo-600 mb-3"></i>
+            <h5 class="fw-semibold">Security & QA</h5>
+            <p class="text-muted dark:text-gray-300">Robust testing, security audits, and bug-free deployments.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Call to Action -->
+  <section class="text-center py-10 bg-indigo-600 text-white dark:bg-indigo-800" data-aos="fade-up">
+    <h3 class="text-2xl fw-bold mb-2">Looking for a Custom Solution?</h3>
+    <p class="mb-4 text-white/80">Let’s build your vision together — from idea to launch.</p>
+    <a href="#contact" class="btn btn-light fw-semibold">Get In Touch</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="text-center text-sm py-4 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
+    &copy; 2025 Modern Solutions.
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ once: true });</script>
+</body>
+</html>

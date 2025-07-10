@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyBrand — Home</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Dark Mode and RTL Styles -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      transition: background 0.3s, color 0.3s;
+    }
+    .dark body {
+      background-color: #1f2937;
+      color: #e5e7eb;
+    }
+    [dir="rtl"] .text-start { text-align: right !important; }
+    .hero-text-slide {
+      animation: slideInRight 1.2s ease-out both;
+    }
+    @keyframes slideInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(100px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    .scroll-arrow {
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-8px);
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100">
+
+  <!-- Navbar -->
+  <div id="navbar1"></div>
+  <!-- <nav class="navbar navbar-expand-lg bg-white dark:bg-gray-800 shadow-sm sticky-top py-3 z-50">
+    <div class="container-fluid flex justify-between items-center px-4">
+      <a class="navbar-brand text-3xl font-extrabold text-indigo-600 dark:text-indigo-400" href="#">MyBrand</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse justify-center" id="navbarNav">
+        <ul class="navbar-nav gap-3">
+          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="Homepages/Homepage1.html">Home1</a></li>
+          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="Homepages/Homepage2.html">Home2</a></li>
+          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="AboutUs/AboutUspage.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="Services/Services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="Services/Servicedetailspage.html">ServicesDetailsPage</a></li>
+          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="Blog/Blogpage.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="Contact/ContactUspage.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav> -->
+
+  <!-- Hero Section -->
+  <section class="relative h-[90vh] bg-cover bg-center flex items-center justify-center text-white"
+           style="background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 to-black/30"></div>
+    <div class="relative z-10 text-center px-4 max-w-2xl hero-text-slide">
+      <h1 class="text-5xl font-bold mb-4">Empowering Digital Services</h1>
+      <p class="text-lg text-gray-100 mb-6">Your growth partner in software, branding, and digital transformation.</p>
+      <a href="#services" class="btn btn-lg bg-indigo-600 text-white px-5 py-3 rounded-full hover:bg-indigo-700 transition">Explore Services</a>
+    </div>
+  </section>
+
+  <!-- Scroll Arrow -->
+  <div class="text-center py-4">
+    <a href="#features" class="text-indigo-600 dark:text-indigo-400 scroll-arrow text-2xl">
+      ↓
+    </a>
+  </div>
+
+  <!-- Features Section -->
+  <section id="features" class="py-20 bg-gradient-to-br from-indigo-50 to-white dark:from-gray-800 dark:to-gray-900">
+    <div class="container px-4">
+      <div class="row g-4">
+        <div class="col-md-4">
+          <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+            <img src="https://img.icons8.com/ios-filled/100/code.png" class="mx-auto mb-3 w-14" alt="Web Dev" />
+            <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">Web Development</h3>
+            <p class="text-gray-600 dark:text-gray-300">Build scalable, responsive, and elegant web solutions with us.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+            <img src="https://img.icons8.com/ios-filled/100/paint-palette.png" class="mx-auto mb-3 w-14" alt="Design" />
+            <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">Creative Design</h3>
+            <p class="text-gray-600 dark:text-gray-300">Unique designs that reflect your brand identity and connect with your users.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="bg-white dark:bg-gray-800 p-5 rounded-lg shadow-md hover:shadow-xl transition duration-300 text-center">
+            <img src="https://img.icons8.com/ios-filled/100/rocket.png" class="mx-auto mb-3 w-14" alt="Launch" />
+            <h3 class="text-xl font-semibold text-indigo-700 dark:text-indigo-300 mb-2">Product Launch</h3>
+            <p class="text-gray-600 dark:text-gray-300">From concept to execution — we help you launch successfully.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 mt-4">
+    <div class="container text-center text-sm">
+      <p>&copy; 2025 MyBrand. All rights reserved.</p>
+      <div class="mt-2">
+        <a href="#" class="text-indigo-400 hover:underline mx-2">Privacy Policy</a> |
+        <a href="#" class="text-indigo-400 hover:underline mx-2">Terms</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    // fetch('Navbar.html')
+    //   .then(res => res.text())
+    //   .then(data => document.getElementById('navbar').innerHTML = data);
+
+        document.addEventListener('DOMContentLoaded', function () {
+    fetch('Navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar1').innerHTML = data);
+  });
+  </script>
+</body>
+</html>
+<!-- <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    fetch('navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('navbar').innerHTML = data);
+  });
+</script> -->
