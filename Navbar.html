@@ -4,28 +4,80 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=\, initial-scale=1.0">
     <title>Document</title>
+    <style>
+    .collapse {
+  visibility: hidden;
+}
+
+.collapse.show {
+  visibility: visible !important;
+}
+ body {
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .nav-link {
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      transform: translateY(-2px);
+      background: linear-gradient(to right, #6366f1, #8b5cf6);
+      color: #fff !important;
+      border-radius: 0.5rem;
+      padding: 0.5rem 1rem;
+    }
+
+    .login-btn {
+      transition: all 0.3s ease;
+    }
+
+    .login-btn:hover {
+      background: linear-gradient(to right, #6366f1, #8b5cf6);
+      color: white;
+      transform: scale(1.05);
+    }
+
+    </style>
  </head>
  <body>
      <nav class="navbar navbar-expand-lg bg-white dark:bg-gray-800 shadow-sm sticky-top py-3 z-50">
     <div class="container-fluid flex justify-between items-center px-4">
-      <a class="navbar-brand text-3xl font-extrabold text-indigo-600 dark:text-indigo-400" href="#">MyBrand</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+<a class="navbar-brand text-2xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent dark:from-indigo-400 dark:via-purple-400 dark:to-pink-400" href="/index.html">
+  MyBrand
+</a>      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="navbar-collapse justify-center" id="navbarNav">
         <ul class="navbar-nav gap-3">
+          
           <!-- if you want to run locally you should change href path '/Homepages/Homepage1.html' like this way, jut remouve
            TestingSite domain name that is Github repo domain ok -->
-          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="/TestingSite/Homepages/Homepage1.html">Home1</a></li>
-          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="/TestingSite/Homepages/Homepage2.html">Home2</a></li>
-          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="/TestingSite/AboutUs/AboutUspage.html">About</a></li>
-          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="/TestingSite/Services/Services.html">Services</a></li>
-          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="/TestingSite/Services/Servicedetailspage.html">ServicesDetailsPage</a></li>
-          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="/TestingSite/Blog/Blogpage.html">Blog</a></li>
-          <li class="nav-item"><a class="nav-link text-indigo-700 dark:text-indigo-300" href="/TestingSite/Contact/ContactUspage.html">Contact</a></li>
+           
+          <li class="nav-item"><a class="nav-link text-gray-700 dark:text-gray-300 fw-medium" href="/TestingSite/Homepages/Homepage1.html">Home1</a></li>
+          <li class="nav-item"><a class="nav-link text-gray-700 dark:text-gray-300 fw-medium" href="/TestingSite/Homepages/Homepage2.html">Home2</a></li>
+         <li class="nav-item"><a class="nav-link text-gray-700 dark:text-gray-300 fw-medium" href="/TestingSite/AboutUs/AboutUspage.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-gray-700 dark:text-gray-300 fw-medium" href="/TestingSite/Services/Services.html">Services</a></li>
+         <li class="nav-item"><a class="nav-link text-gray-700 dark:text-gray-300 fw-medium" href="/TestingSite/Services/Servicedetailspage.html">ServicesDetailsPage</a></li>
+          <li class="nav-item"><a class="nav-link text-gray-700 dark:text-gray-300 fw-medium" href="/TestingSite/Blog/Blogpage.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link text-gray-700 dark:text-gray-300 fw-medium" href="/TestingSite/Contact/ContactUspage.html">Contact</a></li>
         </ul>
       </div>
+       <div class="d-none d-lg-block">
+        <a href="/Login.html" class="login-btn btn btn-outline-indigo rounded-pill px-4 py-2 text-indigo-600 dark:text-indigo-300 border border-indigo-500 dark:border-indigo-300 fw-semibold">
+          Login
+        </a>
+      </div>
+     
+      <div class="d-none d-lg-block ml-2">
+        <a href="/Signup.html" class="login-btn btn btn-outline-indigo rounded-pill px-4 py-2 text-indigo-600 dark:text-indigo-300 border border-indigo-500 dark:border-indigo-300 fw-semibold">
+          SignUp
+        </a>
+      </div>
     </div>
+
   </nav>
  </body>
  </html>
+
+
