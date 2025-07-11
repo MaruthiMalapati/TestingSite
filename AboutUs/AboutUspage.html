@@ -182,11 +182,7 @@
   <!-- Scroll Fade-In Animation -->
   <script>
 
-        document.addEventListener('DOMContentLoaded', function () {
-    fetch('Navbar.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('aboutusnavbar').innerHTML = data);
-  });
+
 
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -197,6 +193,12 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+            document.addEventListener('DOMContentLoaded', function () {
+    fetch('./../Navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('aboutusnavbar').innerHTML = data);
+  });
   </script>
 
 </body>

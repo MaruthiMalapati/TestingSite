@@ -21,7 +21,7 @@
   </style>
 </head>
 <body class="bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 transition-all duration-300">
-
+   <div id="Blogpagenavbar"></div>
 <!-- Header -->
 <header class="bg-gradient-to-r from-purple-600 to-indigo-700 text-white py-6 shadow-lg">
   <div class="container text-center">
@@ -150,6 +150,13 @@
 
 <!-- Search Filter JS -->
 <script>
+
+       document.addEventListener('DOMContentLoaded', function () {
+    fetch('./../Navbar.html')
+      .then(res => res.text())
+      .then(data => document.getElementById('Blogpagenavbar').innerHTML = data);
+  });
+
   document.getElementById("searchInput").addEventListener("input", function () {
     const filter = this.value.toLowerCase();
     const cards = document.querySelectorAll(".blog-card");
@@ -158,6 +165,7 @@
       card.style.display = title.includes(filter) ? "block" : "none";
     });
   });
+
 </script>
 
 </body>
