@@ -25,16 +25,24 @@
     .bg-blur {
       backdrop-filter: blur(10px);
     }
+    @keyframes marquee {
+      0% { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
+    .animate-marquee {
+      display: flex;
+      animation: marquee 20s linear infinite;
+    }
   </style>
 </head>
 
 <body class="bg-gradient-to-b from-indigo-50 via-white to-gray-200 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 text-gray-900 dark:text-gray-100 transition duration-500">
-    <div id="servicesnavbar"></div>
+  <div id="servicesnavbar"></div>
+
   <!-- Header -->
   <header class="sticky-top bg-white/70 dark:bg-gray-900/80 backdrop-blur-lg border-b shadow-sm py-3 z-50">
     <div class="container d-flex justify-content-between align-items-center">
       <h1 class="text-2xl fw-bold text-indigo-700 dark:text-indigo-400">Our Services</h1>
-      <!-- <button onclick="document.documentElement.classList.toggle('dark')" class="btn btn-sm btn-outline-secondary">Toggle Mode</button> -->
     </div>
   </header>
 
@@ -44,7 +52,6 @@
       <h2 class="text-4xl fw-bold mb-3" data-aos="fade-up">Explore Our Digital Solutions</h2>
       <p class="lead text-muted dark:text-gray-300" data-aos="fade-up" data-aos-delay="100">From web to mobile, branding to cloud — we build with purpose and precision.</p>
     </div>
-    <!-- Floating Background Shapes -->
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
       <svg class="absolute top-10 left-1/2 -translate-x-1/2 w-[300px] opacity-20 animate-pulse" fill="none" viewBox="0 0 200 200"><circle cx="100" cy="100" r="100" fill="#4F46E5"/></svg>
       <svg class="absolute bottom-0 right-10 w-[200px] opacity-30 animate-spin-slow" fill="#818cf8" viewBox="0 0 100 100"><rect width="100" height="100" rx="20"/></svg>
@@ -55,16 +62,14 @@
   <section class="py-10">
     <div class="container">
       <div class="row g-4">
-
-        <!-- Service Card -->
+        <!-- Service Cards -->
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:scale-[1.03] transition transform duration-300">
+          <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:scale-[1.03] transition duration-300">
             <i class="fas fa-code fa-2x text-indigo-600 mb-3"></i>
             <h5 class="fw-semibold">Web Development</h5>
             <p class="text-muted dark:text-gray-300">Custom websites using HTML, React, and frameworks. Fast, secure, and scalable builds.</p>
           </div>
         </div>
-
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
           <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:rotate-1 hover:scale-105 transition duration-300">
             <i class="fas fa-mobile-alt fa-2x text-indigo-600 mb-3"></i>
@@ -72,7 +77,6 @@
             <p class="text-muted dark:text-gray-300">Cross-platform apps using Flutter and React Native for iOS and Android.</p>
           </div>
         </div>
-
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
           <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:scale-105 transition duration-300">
             <i class="fas fa-paint-brush fa-2x text-indigo-600 mb-3"></i>
@@ -80,7 +84,6 @@
             <p class="text-muted dark:text-gray-300">User-first experiences with intuitive interfaces and engaging visuals.</p>
           </div>
         </div>
-
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
           <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:-rotate-1 transition duration-300">
             <i class="fas fa-bullhorn fa-2x text-indigo-600 mb-3"></i>
@@ -88,7 +91,6 @@
             <p class="text-muted dark:text-gray-300">SEO, social media, and content marketing to grow your digital presence.</p>
           </div>
         </div>
-
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
           <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:scale-105 hover:shadow-xl transition duration-300">
             <i class="fas fa-cloud fa-2x text-indigo-600 mb-3"></i>
@@ -96,7 +98,6 @@
             <p class="text-muted dark:text-gray-300">CI/CD pipelines, cloud scaling, AWS & Azure expertise.</p>
           </div>
         </div>
-
         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
           <div class="p-4 bg-white dark:bg-gray-800 border rounded-4 shadow-lg hover:rotate-2 transition duration-300">
             <i class="fas fa-shield-alt fa-2x text-indigo-600 mb-3"></i>
@@ -104,23 +105,84 @@
             <p class="text-muted dark:text-gray-300">Robust testing, security audits, and bug-free deployments.</p>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Call to Action -->
+   <section class="py-16 bg-gray-50 dark:bg-gray-800" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-10 text-indigo-700 dark:text-white">Our Tech Stack</h2>
+      <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 items-center justify-center">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 grayscale hover:grayscale-0 transition duration-300 hover:scale-110" alt="HTML5"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 grayscale hover:grayscale-0 transition duration-300 hover:scale-110" alt="CSS3"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 grayscale hover:grayscale-0 transition duration-300 hover:scale-110" alt="JavaScript"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 grayscale hover:grayscale-0 transition duration-300 hover:scale-110" alt="React"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-12 grayscale hover:grayscale-0 transition duration-300 hover:scale-110" alt="Flutter"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg"
+     alt="AWS" class="w-20 grayscale hover:grayscale-0 transition duration-300 hover:scale-110">
+
+      </div>
+    </div>
+  </section>
+  <!-- How We Work -->
+  <section class="py-16 bg-white dark:bg-gray-950" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-10 text-indigo-700 dark:text-indigo-300">How We Work</h2>
+      <div class="row g-5 justify-content-center">
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+          <div class="p-4 rounded-3 bg-gradient-to-br from-indigo-100 to-indigo-200 dark:from-indigo-800 dark:to-indigo-700 shadow-md">
+            <i class="fas fa-lightbulb fa-2x text-indigo-600 mb-3"></i>
+            <h5 class="fw-semibold">Discover</h5>
+            <p class="text-muted dark:text-gray-300">Understanding your goals and pain points to map the perfect digital strategy.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+          <div class="p-4 rounded-3 bg-gradient-to-br from-purple-100 to-purple-200 dark:from-purple-800 dark:to-purple-700 shadow-md">
+            <i class="fas fa-pencil-ruler fa-2x text-purple-600 mb-3"></i>
+            <h5 class="fw-semibold">Design & Build</h5>
+            <p class="text-muted dark:text-gray-300">Crafting beautiful, functional interfaces with modern code practices.</p>
+          </div>
+        </div>
+        <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+          <div class="p-4 rounded-3 bg-gradient-to-br from-green-100 to-green-200 dark:from-green-800 dark:to-green-700 shadow-md">
+            <i class="fas fa-rocket fa-2x text-green-600 mb-3"></i>
+            <h5 class="fw-semibold">Launch & Scale</h5>
+            <p class="text-muted dark:text-gray-300">Deploy, monitor, and iterate with agile tools and scalable cloud tech.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tech Stack -->
+ 
+
+  <!-- Logos Marquee -->
+  <!-- <section class="py-14 bg-white dark:bg-gray-950" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="text-2xl font-semibold text-indigo-700 dark:text-indigo-300 mb-6">Trusted by Brands</h2>
+      <div class="overflow-hidden">
+        <div class="flex animate-marquee space-x-12 items-center">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" class="h-10 grayscale hover:grayscale-0 transition" alt="Microsoft">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" class="h-10 grayscale hover:grayscale-0 transition" alt="Apple">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" class="h-10 grayscale hover:grayscale-0 transition" alt="IBM">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" class="h-10 grayscale hover:grayscale-0 transition" alt="Google">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Meta_Platforms_Inc._logo.svg" class="h-10 grayscale hover:grayscale-0 transition" alt="Meta">
+        </div>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- CTA -->
   <section class="text-center py-10 bg-indigo-600 text-white dark:bg-indigo-800" data-aos="fade-up">
     <h3 class="text-2xl fw-bold mb-2">Looking for a Custom Solution?</h3>
     <p class="mb-4 text-white/80">Let’s build your vision together — from idea to launch.</p>
     <a href="#contact" class="btn btn-light fw-semibold">Get In Touch</a>
   </section>
+  
 
   <!-- Footer -->
-  <!-- <footer class="text-center text-sm py-4 bg-gray-100 dark:bg-gray-900 text-gray-600 dark:text-gray-400">
-    &copy; 2025 Modern Solutions.
-  </footer> -->
-   <footer class="bg-gray-900 text-white py-6 mt-4">
+  <footer class="bg-gray-900 text-white py-6 mt-4">
     <div class="container text-center text-sm">
       <p>&copy; 2025 MyBrand. All rights reserved.</p>
       <div class="mt-2">
@@ -133,12 +195,12 @@
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script>AOS.init({ once: true });</script>
-   <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    fetch('./../Navbar.html')
-      .then(res => res.text())
-      .then(data => document.getElementById('servicesnavbar').innerHTML = data);
-  });
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      fetch('./../Navbar.html')
+        .then(res => res.text())
+        .then(data => document.getElementById('servicesnavbar').innerHTML = data);
+    });
   </script>
 </body>
 </html>
